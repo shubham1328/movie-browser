@@ -1,0 +1,202 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 16px; /* Spacing between movie cards */
+  padding: 20px;
+  justify-items: center; /* Center-align cards horizontally */
+  box-sizing: border-box; /* Include padding in the element's width calculation */
+  max-width: 100%; /* Ensure it doesn't overflow */
+  overflow-x: hidden; /* Prevent horizontal scrolling */ 
+  background: black;
+}
+
+.movie-item {
+  /* background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column; /* Ensure that the content is stacked vertically */
+  justify-content: space-between;
+  align-items: center; /* Center align the content inside */
+  padding: 10px;
+  transition: transform 0.3s ease-in-out; /* Optional hover effect */
+}
+
+.movie-item:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.movie-card {
+  width: 100%;
+  height: auto;
+}
+
+.movie-information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.movie-information img {
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.more-info:hover {
+  color: #e50914;
+}
+
+.movie-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px
+}
+
+.movie-detail {
+ max-width: 900px;
+  margin: 40px auto;
+  text-align: center;
+  background: linear-gradient(to bottom, #141414, #1c1c1c);
+  color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+
+.movie-detail-poster {
+  width: 100%;
+  max-width: 500px;
+  height: 100vh;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.movie-detail-poster:hover {
+  transform: scale(1.05);
+}
+
+.movie-detail h1 {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.movie-detail p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #b0b0b0;
+  margin: 10px 0;
+}
+
+.movie-detail img {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease;
+}
+
+.movie-detail img:hover {
+  transform: scale(1.05);
+}
+
+.movie-detail h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #f8d742;
+}
+
+.movie-detail p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #b0b0b0;
+  margin-bottom: 10px;
+}
+
+.movie-detail p.release-date {
+  font-size: 0.9rem;
+  color: #777;
+  font-style: italic;
+}
+
+.movie-detail .button-container {
+  margin-top: 20px;
+}
+
+.movie-detail .button-container button {
+  background-color: #f8d742;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.movie-detail .button-container button:hover {
+  background-color: #e5c12f;
+  transform: translateY(-2px);
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 80px;
+}
+
+.more-info {
+  color: #1e90ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.more-info:hover {
+  color: #e50914;
+}
+
+.favorite-btn {
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.favorite-btn:hover {
+  transform: scale(1.2);
+  color: #e50914;
+}
